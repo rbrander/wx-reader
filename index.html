@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather Decoder</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="data:image/x-icon;base64,">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A weather (METAR/TAF) decoder">
+  <meta name="keywords" content="weather, METAR, TAF, decoder">
+  <style>
+    html, body { margin: 0; padding: 0; } /* CSS-reset */
+    body {
+      font-family: Arial;
+      margin: 1rem auto;
+    }
+    div {
+      width: 60%;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .controls {
+    }
+    .controls button {
+      text-align: center;
+      line-height: 1.5rem;
+      font-size: 1rem;
+      border: 1px solid black;
+      background-color: beige;
+      border-radius: 4px;
+    }
+    .results {
+      border: 1px solid black;
+      background-color: beige;
+    }
+    #parsedMETAR {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <heading><h1>METAR/TAF Decoder</h1></heading>
+  </center>
+  <div class="controls">
+    <button type="button" onclick="getResults()">Refresh</button>
+  </div>
+  <div class="results">
+    <h3>METAR:</h3>
+    <p id="METAR" />
+    <h3>Parsed METAR:</h3>
+    <pre id="parsedMETAR" />
+  </div>
+  <script type="text/javascript" src="app.js" defer="true"></script>
+</body>
+</html>
